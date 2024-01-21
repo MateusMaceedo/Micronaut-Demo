@@ -1,0 +1,23 @@
+micronaut:
+  application:
+    name: hello-micronaut
+
+  server:
+    port: 8080
+
+  http:
+    client:
+      check-event-loop-thread: false
+      url: "https://viacep.com.br"
+
+redis:
+  enabled: true
+  uri: redis://localhost:6379
+  ttl: 3600
+
+aws:
+  execution: false
+  endpoints:
+    dynamodb:
+      endpointOverride: http://localhost:4566
+  region: us-east-1
